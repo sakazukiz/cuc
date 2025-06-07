@@ -1,0 +1,146 @@
+
+#rewards-section-content {
+    max-width: 100%; 
+    width: 100%;
+    margin: 0; 
+    padding: 0;
+    background-color: transparent; 
+    font-family: 'dinm', Arial, sans-serif;
+    color: #333;
+}
+
+#rewards-section-content img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+#rewards-section-content .rewards-menu-bar {
+    display: flex;
+    background-color: #de963e;
+}
+
+#rewards-section-content .menu-tab {
+    flex: 1;
+    padding: 8px;
+    height: 50px;
+    border: none;
+    background-color: transparent;
+    color: #ffffff;
+    text-align: center;
+    font-size: 12px;
+    letter-spacing: 2px;
+    cursor: pointer;
+    transition: background-color 0.2s, color 0.2s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#rewards-section-content .menu-tab:hover, 
+#rewards-section-content .menu-tab.active {
+    background-color: #c36828;
+    color: #0b0906;
+    text-shadow: 1px 1px 10px #c59a70;
+}
+
+#rewards-section-content .menu-icon { width: 40px; height: auto; }
+#rewards-section-content .icon-skin { animation: bounceIn 1s linear infinite; }
+#rewards-section-content .icon-scenery { animation: bounceIn 1.2s linear infinite; }
+#rewards-section-content .icon-skill { width: 35px; animation: bounceIn 1.4s linear infinite; }
+#rewards-section-content .icon-gems { margin-top: -5px; animation: bounceIn 1.6s linear infinite; }
+
+#rewards-section-content .reward-section {
+    background-color: #e4b881;
+    padding: 10px;
+}
+.modal-gacha,
+.modal-gacha video,
+.modal-gacha .hint {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0) !important; 
+  tap-highlight-color: rgba(0, 0, 0, 0) !important;         
+  outline: none !important;                                 
+  -webkit-touch-callout: none !important;                   
+  -webkit-user-select: none !important;                     
+  -khtml-user-select: none !important;
+  -moz-user-select: none !important;
+  -ms-user-select: none !important;
+  user-select: none !important;
+}
+
+
+video {
+    background-color: transparent !important;
+}
+#rewards-section-content .carousel-container {
+    position: relative;
+    text-align: center;
+    border-radius:10px;
+    margin-bottom: 10px;
+    overflow: hidden; 
+    height: 150px; /* Atur tinggi carousel atau biarkan gambar menentukannya */
+}
+
+#rewards-section-content .carousel-slides {
+    display: flex; 
+    height: 100%;
+    transition: transform 0.5s ease-in-out; 
+}
+
+#rewards-section-content .carousel-slide {
+    min-width: 100%; 
+    box-sizing: border-box;
+    display: none; 
+    height: 100%;
+}
+#rewards-section-content .carousel-slide.active {
+    display: block; 
+}
+
+#rewards-section-content .carousel-slide img {
+    width: 100%; 
+    height: 100%;
+    object-fit: cover; 
+    display: block; 
+}
+
+#rewards-section-content .rewards-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    padding-top: 10px;
+}
+
+#rewards-section-content .reward-item {
+    width: 30%;
+    margin-bottom: 20px;
+    display: inline-block;
+    background-color: transparent;
+    cursor: pointer;
+    box-sizing: border-box;
+}
+#rewards-section-content .reward-item figure {
+    margin: 0; padding: 0; overflow: hidden; position: relative; width: 100%; height: 100%;
+}
+#rewards-section-content .reward-item figure img {
+    width: 100%; height: 100%; object-fit: contain;
+}
+
+#rewards-section-content .itemShine figure::before {
+    content: ''; position: absolute; top: 0; left: -75%; width: 50%; height: 100%;
+    background: linear-gradient(to right, rgba(255,255,255,0) 0%, rgba(255,255,255,0.3) 100%);
+    transform: skewX(-25deg); animation: shine 2s infinite; z-index: 1;
+}
+
+@keyframes shine { 100% { left: 125%; } }
+@keyframes bounceIn { 0%, 20%, 50%, 80%, 100% { transform: translateY(0); } 40% { transform: translateY(-8px); } 60% { transform: translateY(-4px); } }
+@keyframes fadeIn { from { opacity: 0.7; } to { opacity: 1; } }
+
+@media only screen and (max-width: 600px) {
+    #rewards-section-content .menu-tab { font-size: 10px; }
+    #rewards-section-content .menu-icon { width: 30px; }
+    #rewards-section-content .icon-skill { width: 28px; }
+    #rewards-section-content .reward-item { width: 30%; }
+    #rewards-section-content .carousel-container { height: 120px; }
+}
